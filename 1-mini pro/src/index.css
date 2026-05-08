@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+
+}
+
+html,
+body {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.parent {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    height: 350px;
+    width: 300px;
+    background-color: white;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.card .top {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10PX;
+    align-items: center;
+
+
+}
+
+.top img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #dadada;
+    padding: 2px;
+}
+
+.top button {
+
+    height: 1.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 0.3rem;
+    border: 1px solid #dadada;
+    padding: 2px 4px;
+    cursor: pointer;
+
+}
+
+.top button i {
+    color: rgb(26, 22, 22);
+    font-size: 0.7rem;
+}
+
+.center h2 {
+    font-size: 24px;
+}
+
+.card .center h3 {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card .center h3 span {
+    font-weight: 200;
+    color: #888;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+.tag {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+    color: #444;
+    padding: 5px 0;
+}
+
+.tag h4 {
+    display: inline-flex;
+    background-color: #f2f0f0;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1.5px solid #e0dada;
+    padding-top: 15px;
+}
+
+.card .bottom p {
+    color: #888;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
+
+.bottom h3 {
+    font-size: 22px
+}
+
+.bottom button {
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.bottom button:hover {
+    background-color: rgb(40, 55, 75);
+}
