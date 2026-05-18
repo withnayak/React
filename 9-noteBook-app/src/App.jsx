@@ -59,9 +59,9 @@ const [task, setTask] = useState([])
         <div className='flex flex-wrap items-start justify-start p-2 gap-5 overflow-auto h-full'>
           
           {task.map(function(elem,idx){
-            return <div key={idx} className='bg-white min-h-55 w-45 p-4 rounded-2xl   text-black'>
+            return <div key={idx} className='bg-white min-h-55 w-45 p-4 rounded-2xl wrap-break-word text-black'>
               <h2 className='font-semibold border-b-2 leading-tight'>{elem.title}</h2>
-              <h3 className='font-medium text-gray-500 pt-4 break-w'>{elem.details}</h3>
+              <h3 className='font-medium text-gray-500 pt-4 '>{elem.details}</h3>
             </div>
           })}
           
