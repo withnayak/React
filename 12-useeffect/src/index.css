@@ -1,0 +1,17 @@
+*{
+  background-color: black;
+  color: white;
+  
+}
+button{
+  background-color: rgb(28, 193, 193);
+  color: black;
+  border-radius: 30px;
+  padding: 15px;
+  margin: 33px;
+  
+}
+h1{
+  padding: 15px;
+  margin: 33px;
+}
