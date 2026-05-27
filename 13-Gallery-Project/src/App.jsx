@@ -1,29 +1,31 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import 'remixicon/fonts/remixicon.css'
 const App = () => {
 
   const [data, setData] = useState([])
+  const [index, setIndex] = useState(1)
   const Data = async () => {
 
-    const response = await axios.get('https://picsum.photos/v2/list?page=2&limit=12')
+    const response = await axios.get(`https://picsum.photos/v2/list?page=${index}&limit=12`)
     setData(response.data)
     console.log(response.data)
   }
   useEffect(function () {
     Data()
-  }, [])
+  }, [index])
 
   let printData = 'no data found!!!'
   if (data.length > 0) {
     printData = data.map(function (elem, idx) {
       return <div key={idx}>
 
-        <div className=' bg-white h-70 w-85 rounded-2xl ' 
+        <div className=' bg-white h-70 w-85 rounded-2xl '
         >
           <a href={elem.url} target='_blank'
           >
-            <img src={elem.download_url} 
-            alt="this image is generated through api if fail to load check internet connection or reload the site"
+            <img src={elem.download_url}
+              alt="this image is generated through api if fail to load check internet connection or reload the site"
               className='h-full w-full object-cover ' />
           </a>
 
@@ -43,21 +45,32 @@ const App = () => {
       <div className='flex justify-center gap-6'>
 
         <button
-        className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl '
-       >
-        Prev!
-      </button>
+          onClick={() => {
+            if (index > 1) {
+              setIndex(index - 1)
+              console.log('btnclicked1')
+            }
 
-      <h2 className='bg-gray-500 p-5 rounded-3xl '>Page no</h2>
+          }}
+          className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl '
+        >
+          <i className="ri-arrow-left-s-line"></i>Prev
+        </button>
 
-      <button
-        className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl '
-       >
-        Next!
-      </button>
+        <h2 className='bg-gray-500 p-5 rounded-3xl '>Page no {index}</h2>
+
+        <button
+          onClick={() => {
+            console.log("btnclicked2")
+            setIndex(index+ 1)
+          }}
+          className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl '
+        >
+          Next<i className="ri-arrow-right-s-line mt-2"></i>
+        </button>
       </div>
     </div>
-    
+
   )
 }
 
