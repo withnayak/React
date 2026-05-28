@@ -52,19 +52,19 @@ const App = () => {
             }
 
           }}
-          className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl '
+          className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl font-semibold '
         >
           <i className="ri-arrow-left-s-line"></i>Prev
         </button>
 
-        <h2 className='bg-gray-500 p-5 rounded-3xl '>Page no {index}</h2>
+        <h2 className='bg-black p-5 rounded-3xl font-semibold '>Page no {index}</h2>
 
         <button
           onClick={() => {
             console.log("btnclicked2")
             setIndex(index+ 1)
           }}
-          className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl '
+          className='bg-red-500 p-5 cursor-pointer active:scale-40 hover:bg-amber-600 rounded-3xl font-semibold '
         >
           Next<i className="ri-arrow-right-s-line mt-2"></i>
         </button>
