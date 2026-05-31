@@ -11,6 +11,7 @@ import Mens from './Pages/Mens'
 import Womens from './Pages/Womens'
 import Kids from './Pages/Kids'
 import PageNot from './Pages/PageNot'
+import ContactDetails from './Pages/ContactDetails'
 
 
 const App = () => {
@@ -20,10 +21,12 @@ const App = () => {
       <Navbar />
       <Footer />
       <Routes>
-        <Route path='home' element={<Home />} />
-        <Route path='contact' element={<Contact />} />
-        <Route path='about' element={<About />} />
-        <Route path='product' element = {<Product/>}>
+        <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/about' element={<About />} />
+         <Route path='/contact/:id' element = {<ContactDetails/>}/>
+        <Route path='/product' element = {<Product/>}>
+       
             <Route path='mens' element ={<Mens/>}/>
             <Route path='womens' element ={<Womens/>}/>
             <Route path='kids' element ={<Kids/>}/>
