@@ -12,6 +12,7 @@ import Womens from './Pages/Womens'
 import Kids from './Pages/Kids'
 import PageNot from './Pages/PageNot'
 import ContactDetails from './Pages/ContactDetails'
+import Navbar2 from './Components/Navbar2'
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
     <div className='bg-black text-white h-screen '>
 
       <Navbar />
+      <Navbar2/>
       <Footer />
       <Routes>
         <Route path='/' element={<Home />} />
